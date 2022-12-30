@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, abort, request, render_template
-from .stocks_db import StocksDAO
+from stocks_db import StocksDAO
 from flask_cors import CORS
 from dotenv import load_dotenv
 import requests
