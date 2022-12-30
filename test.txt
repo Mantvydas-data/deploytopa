@@ -1,0 +1,10 @@
+MBOUMFINANCE_API_KEY="cd1248be26mshd336fcee88506e5p112db1jsn49c4a1406cd1"
+MBOUMFINANCE_API_HOST="https://mboum-finance.p.rapidapi.com/hi/history"
+THIRD_API_HOST="mboum-finance.p.rapidapi.com"
+SECRET_KEY="83c85f61bc1ec44d1ace7789d658a304"
+MYSQL_HOST="localhost"
+MYSQL_USER="admin"
+MYSQL_PASSWORD="admin"
+MYSQL_DB="db"
+FLASK_APP=app
+FLASK_DEBUG=True
