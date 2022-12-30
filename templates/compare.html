@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+<form id="formdata" class="ms-auto" style="width: 1060px;" action="#">
+<!-- Ticker picker -->
+	<div id="hideCompare">
+		<label>
+			<h5>For historical performance comparison enter stock tickers: </h5>
+		</label>
+		<br>
+		<div class="col-sm-12">
+			<div class="col-sm-3">
+				<input class="form-control col-sm-3" type="name" id="tickername1" name="tickername1" placeholder="Stock ticker 1" required>
+				<input class="form-control col-sm-3" type="name" id="tickername2" name="tickername2" placeholder="Stock ticker 2"required><br>
+			</div>
+			<div class="mx-auto">
+				<button class="btn btn-outline-secondary btn-sm-6" type="submit">Get Comparison Data</button>
+			</div>
+		</div>
+	</div>
+</form>
+<hr>
+
+<div id='myDiv'>
+	<!-- Plotly chart will be drawn inside this DIV -->
+</div>
+{% endblock %}
+
+<!--
+References
+
+
+https://stackoverflow.com/questions/22988250/two-ajax-requests-on-same-event-at-same-time-what-should-be-the-typical-behavi/30730566#30730566
+https://stackoverflow.com/questions/42985348/event-listener-for-form-submit-in-javascript-with-no-submit-action?fbclid=IwAR0BJivVcdxk2odco4uVf_CSdQe-SdpDmiHX8y4_CTTERZFlgCwhO45r5Kc
+https://www.geeksforgeeks.org/how-to-validate-input-field-in-the-html-form/
+https://stackoverflow.com/questions/22988250/two-ajax-requests-on-same-event-at-same-time-what-should-be-the-typical-behavi/30730566#30730566
+https://www.w3schools.com/html/html_form_attributes.asp
+https://stackoverflow.com/questions/3384960/want-html-form-submit-to-do-nothing/3384971#3384971
+https://flask.palletsprojects.com/en/1.1.x/patterns/templateinheritance/
+https://getbootstrap.com/docs/5.3/components/navbar/
+https://stackoverflow.com/questions/19733447/bootstrap-navbar-with-left-center-or-right-aligned-items/20362024#20362024
+-->

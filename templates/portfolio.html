@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content %}
+<div> 
+    <div class="mx-auto" style="width: 1060px;">
+        <button class="btn btn-outline-secondary btn-sm" id="showCreateButton" onclick="showCreate()">Add New Stock
+        </button>
+        <table class="table table-hover table-sm" id="stockTable">
+            <tr>
+                <th>ID</th>
+                <th>Ticker</th>
+                <th>Name</th>
+                <th>Purchase Price</th>
+                <th>Quantity</th>
+                <th>Update</th>
+                <th>Delete</th>
+                <th>Historical Performance</th>
+            </tr>
+        </table>
+        <div id="valueportfolio"><b>Total portfolio cost:</b> 
+            <span id="totalSum"></span>
+        </div>
+    </div>
+</div>
+<div class=" justify-content-center" id='createUpdateForm' style="display: none">
+        <h2>
+            <span id="createLabel">Add new</span> 
+            <span id="updateLabel">Update stock</span>
+        </h2>
+        <input type="hidden" name="id"/>
+        Ticker <input class="form-control" type="text" name="ticker"/> <br/>
+        Name <input class="form-control" type="text" name="sname"/> <br/>
+        Purchase Price <input class="form-control" type="number" name="pprice"/> <br/>
+        Quantity <input class="form-control" type="number" name="quantity"/> <br/>
+        <span>
+            <button class="btn btn-outline-secondary btn-sm" id="doCreateButton" onclick="doCreate()">Create
+            </button>
+        </span>
+        <span>
+            <button class="btn btn-outline-secondary btn-sm" id="doUpdateButton" onclick="doUpdate()">Update
+            </button>
+        </span>
+</div>
+
+<hr>
+<div id='myDiv'>
+    <!-- Plotly chart will be drawn inside this DIV -->
+</div>
+
+{% endblock %}
+
+<!--
+References
+
+https://bobbyhadz.com/blog/python-typeerror-the-json-object-must-be-str-bytes-or-bytearray-not-response#:~:text=The%20Python%20%22TypeError%3A%20the%20JSON,json()%20.
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+https://cs.wellesley.edu/~webdb/readings/ajax/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+https://plotly.com/javascript/time-series/
+https://flask.palletsprojects.com/en/1.1.x/patterns/templateinheritance/
+https://getbootstrap.com/docs/5.3/components/navbar/
+https://stackoverflow.com/questions/19733447/bootstrap-navbar-with-left-center-or-right-aligned-items/20362024#20362024
+-->
