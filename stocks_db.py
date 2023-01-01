@@ -92,7 +92,7 @@ class StocksDAO:
     # https://stackoverflow.com/a/25621844/19501420
     def createtable(self):
         cursor = self.getcursor()
-        sql="create table if not exists stocks (id int AUTO_INCREMENT NOT NULL PRIMARY KEY, ticker varchar(8), sname varchar(250), pprice float(4,2), quantity float(10,2))"
+        sql="create table if not exists stocks (id int AUTO_INCREMENT NOT NULL PRIMARY KEY, ticker varchar(8), sname varchar(250), pprice float(10,2), quantity float(10,2))"
         cursor.execute(sql)
 
         self.connection.commit()
